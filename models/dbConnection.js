@@ -1,14 +1,14 @@
 const mysql = require('mysql')
 
-const con = mysql.createConnection({
+const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
   database: 'instaClone'
 })
 
-con.connect((err) => {
+connection.connect((err) => {
   if(err) throw err
 })
 
-module.export = con
+module.exports = connection

@@ -19,7 +19,7 @@ exports.showAll = (req, res) => {
 
 exports.showByUsers = (req, res) => {
   const id = req.params.id
-  connection.query(`SELECT*FROM v_posts WHERE id = ${id}`, (err, rows, fields) => {
+  connection.query(`SELECT*FROM v_posts WHERE user_id = ${id}`, (err, rows, fields) => {
     if(err){
       response.send(err, res)
     }else{
